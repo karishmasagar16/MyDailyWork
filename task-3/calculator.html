@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="screen" id="demo"></div>
+        <div class="btns">
+            <div>
+                <button onclick="allClear()">AC</button>
+                <button onclick="singleClear()">C</button>
+            </div>
+            <div>
+                <button onclick="show(1)">1</button>
+                <button onclick="show(2)">2</button>
+                <button onclick="show(3)">3</button>
+                <button onclick="show('+')">+</button>
+            </div>
+            <div>
+                <button onclick="show(4)">4</button>
+                <button onclick="show(5)">5</button>
+                <button onclick="show(6)">6</button>
+                <button onclick="show('-')">-</button>
+            </div>
+            <div>
+                <button onclick="show(7)">7</button>
+                <button onclick="show(8)">8</button>
+                <button onclick="show(9)">9</button>
+                <button onclick="show('*')">*</button>
+            </div>
+            <div>
+                <button onclick="show(0)">0</button>
+                <button onclick="equal()">=</button>
+                <button onclick="show('/')">/</button>
+                <button onclick="show('.')">.</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let arr = [];
+    function show(value) {
+        arr.push(value);
+        let demo = document.getElementById('demo');
+        demo.innerHTML = arr.join('');
+    }
+    function equal() {
+        let strarr = arr.join('');
+        let result = eval(strarr);
+        let demo = document.getElementById('demo');
+        demo.innerHTML = result;
+    }
+    function allClear() {
+        arr = [];
+        let demo = document.getElementById('demo');
+        demo.innerHTML = arr;
+    }
+    function singleClear() {
+        let del = arr.pop();
+        let demo = document.getElementById('demo');
+        demo.innerHTML = arr.join('');
+    }
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin-top:1rem;
+    font-size:xx-large;
+    background-color: black;
+}
+#container{
+    border:1px solid greenyellow;
+    margin:auto;
+    width:25%;
+    height:50%;
+    background-color: rgb(70, 66, 66) ;
+    border-radius: 12px;
+}
+.screen{
+    width:370px;
+    height:50px;
+    margin:auto;
+    background-color:greenyellow;
+    margin-top: 3px;
+    border-radius: 12px;
+}
+.btns div{
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(70, 66, 66);
+}
+button{
+    border-radius: 40%;
+    padding:.5rem;
+    margin:10px;
+    border-color: greenyellow;
+    box-shadow: 10px;
+    background-color: rgb(52, 49, 49);
+    color:white;
+}
+button:hover{
+  background-color: greenyellow; 
+  color:black; 
+}
